@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Locatie{% endblock %}
+
+{% block body %}
+
+<!--Styling-->
+
+    <style>
+        body {
+            font-size: 50px;
+            font-family: Roboto, serif;
+            background-image: url("/map.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .icons {
+            width: 60px;
+            height: 60px;
+        }
+
+        .title {
+            text-align: center;
+            background-color: #FFED00;
+            outline: 1px solid black;
+            font-weight: bold;
+            font-size: 80px;
+            padding: 40px;
+        }
+
+        .tableBody {
+            outline: 1px solid black;
+            border-radius: 0px 0px 25px 25px;
+            background-color: white;
+        }
+
+        .tableHead {
+            text-align: center;
+        }
+
+    </style>
+
+<!--Naam van locatie is altijd h1-->
+
+    <h1 class="title">{{ locatie.locatie }}</h1>
+    <table class="table">
+        <tbody class="tableBody">
+            <tr class="tableRow">
+                <th class="tableHead" style="padding: 50px"><img class="icons" src="/user.png" alt="icon"></th>
+                <td class="tableData" style="padding: 50px">{{ locatie.beschrijving }}</td>
+            </tr>
+            <tr class="tableRow">
+                <th class="tableHead" style="padding: 50px"><img class="icons" src="/message.png" alt="icon"></th>
+                <td class="tableData" style="padding: 50px">{{ locatie.email }}</td>
+            </tr>
+            <tr class="tableRow">
+                <th class="tableHead" style="padding: 50px"><img class="icons" src="/phone.png" alt="icon"></th>
+                <td class="tableData" style="padding: 50px">{{ locatie.telenr }}</td>
+            </tr>
+            <tr class="tableRow">
+                <th class="tableHead" style="padding: 20px 50px"><img class="icons" src="/review.png" alt="icon"></th>
+                <td class="tableData" style="padding: 20px 50px; margin-left: 20px; margin-bottom: 50px; color: black; outline: 2px solid black; display: inline-block; border-radius: 40px"><a href="/reviews">Reviews</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

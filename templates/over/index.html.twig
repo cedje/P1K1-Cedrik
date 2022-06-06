@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello OverController!{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        background-color: #DEDEDE;
+    }
+
+    .title {
+        text-align: center;
+        background-image: url("dif_building.png");
+        outline: 1px solid black;
+        font-weight: bold;
+        font-size: 80px;
+        padding: 100px;
+        color: white;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 50px;
+        font-weight: bold;
+    }
+
+    .parOver {
+        font-size: 20px;
+        padding: 0px 30px;
+    }
+</style>
+
+<div>
+    <h1 class="title">OVER</h1>
+</div>
+
+    <div>
+        <h2 class="subtitle">DIFMaps</h2>
+        <p class="parOver">
+            De studenten die deze applicatie hebben gemaakt doen stage op Dutch Innovation Factory in Zoetermeer.
+            Het groepje waarin ze werken heet "DIFMaps". Deze applicatie is gemaakt omdat bepaalde locaties in het grote gebouw moeilijk te vinden zijn.
+        </p>
+    </div>
+<!--h2 moet altijd bold-->
+    <div>
+        <h2 class="subtitle">Developers</h2>
+        <p class="parOver">
+            Cedrik Wouters
+            <br>
+            Donny Haasnoot
+            <br>
+            Glenn Blok
+            <br>
+            Niels Wisker
+            <br>
+            Younes Schrage
+        </p>
+    </div>
+{% endblock %}
