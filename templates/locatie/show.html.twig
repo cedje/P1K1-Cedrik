@@ -14,6 +14,7 @@
             margin-left: 10%;
             margin-right: 10%;
             overflow-x: hidden;
+            background-color: #ffed00;
         }
 
         .icons {
@@ -25,11 +26,15 @@
 
         .title {
             text-align: center;
-            background-color: #FFED00;
-            outline: 1px solid black;
+            background-image: url("../dif_building.png");
             font-weight: bold;
-            font-size: 30px;
-            padding: 10px;
+            font-size: 80px;
+            padding: 100px;
+            color: white;
+            margin-top: -50px;
+            margin-left: -15%;
+            margin-right: -15%;
+            margin-bottom: 0px;
         }
 
         .tableBody {
@@ -44,6 +49,8 @@
         }
 
     </style>
+
+
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="margin-left: -15%; margin-right: -15%">
         <div class="container">
@@ -66,9 +73,13 @@
         </div>
     </nav>
 
+    <div>
+        <h1 class="title">{{ locatie.locatie }}</h1>
+    </div>
+
 <!--Naam van locatie is altijd h1-->
 
-    <h1 class="title">{{ locatie.locatie }}</h1>
+
     <table class="table">
         <tbody class="tableBody">
             <tr class="tableRow">
