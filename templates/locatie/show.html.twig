@@ -3,22 +3,24 @@
 {% block title %}Locatie{% endblock %}
 
 {% block body %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 <!--Styling-->
 
     <style>
         body {
-            font-size: 50px;
+            font-size: 20px;
             font-family: Roboto, serif;
-            background-image: url("/map.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            margin-left: 10%;
+            margin-right: 10%;
+            overflow-x: hidden;
         }
 
         .icons {
-            width: 60px;
-            height: 60px;
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+            text-align: left;
         }
 
         .title {
@@ -26,14 +28,15 @@
             background-color: #FFED00;
             outline: 1px solid black;
             font-weight: bold;
-            font-size: 80px;
-            padding: 40px;
+            font-size: 30px;
+            padding: 10px;
         }
 
         .tableBody {
             outline: 1px solid black;
-            border-radius: 0px 0px 25px 25px;
+            border-radius: 0px 0px 15px 15px;
             background-color: white;
+            text-align: left;
         }
 
         .tableHead {
@@ -42,28 +45,53 @@
 
     </style>
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="margin-left: -15%; margin-right: -15%">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img class="rounded" src="../Afbeelding1.png" alt="..." height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Over</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 <!--Naam van locatie is altijd h1-->
 
     <h1 class="title">{{ locatie.locatie }}</h1>
     <table class="table">
         <tbody class="tableBody">
             <tr class="tableRow">
-                <th class="tableHead" style="padding: 50px"><img class="icons" src="/user.png" alt="icon"></th>
-                <td class="tableData" style="padding: 50px">{{ locatie.beschrijving }}</td>
+                <th class="tableHead" style="padding: 20px"><img class="icons" src="/information.png" alt="icon"></th>
+                <td class="tableData" style="padding: 20px">{{ locatie.beschrijving }}</td>
             </tr>
             <tr class="tableRow">
-                <th class="tableHead" style="padding: 50px"><img class="icons" src="/message.png" alt="icon"></th>
-                <td class="tableData" style="padding: 50px">{{ locatie.email }}</td>
+                <th class="tableHead" style="padding: 20px"><img class="icons" src="/message.png" alt="icon"></th>
+                <td class="tableData" style="padding: 20px">{{ locatie.email }}</td>
             </tr>
             <tr class="tableRow">
-                <th class="tableHead" style="padding: 50px"><img class="icons" src="/phone.png" alt="icon"></th>
-                <td class="tableData" style="padding: 50px">{{ locatie.telenr }}</td>
+                <th class="tableHead" style="padding: 20px"><img class="icons" src="/phone.png" alt="icon"></th>
+                <td class="tableData" style="padding: 20px">{{ locatie.telenr }}</td>
             </tr>
             <tr class="tableRow">
-                <th class="tableHead" style="padding: 20px 50px"><img class="icons" src="/review.png" alt="icon"></th>
-                <td class="tableData" style="padding: 20px 50px; margin-left: 20px; margin-bottom: 50px; color: black; outline: 2px solid black; display: inline-block; border-radius: 40px"><a href="/reviews">Reviews</a></td>
+                <th class="tableHead" style="padding: 20px 20px"><img class="icons" src="/review.png" alt="icon"></th>
+                <td class="tableData" style="padding: 20px 20px; margin-left: 0px; margin-bottom: 20px; color: black; display: inline-block;"><button type="button" style="color: black; font-size: 20px" class="btn btn-outline-secondary">Go to Reviews page</button></td>
             </tr>
         </tbody>
     </table>
+
+    <div>
+        <img src="../mapplaceholder.png" width="100%">
+    </div>
 
 {% endblock %}
